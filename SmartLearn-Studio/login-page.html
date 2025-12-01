@@ -1,129 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SmartLearn Studio | Sign In</title>
     <!-- Load Tailwind CSS -->
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <script
+      src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1"
+      type="module"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f7f9fb;
-        }
-        /* Style for the background image section */
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #f7f9fb;
+      }
+      /* Style for the background image section */
+      .login-bg {
+        background-image: url("https://placehold.co/1000x1200/4f46e5/ffffff?text=AI+Learning+Background"); /* Placeholder for your project background image */
+        background-size: cover;
+        background-position: center;
+        /* Gradient overlay for better text contrast */
+        position: relative;
+      }
+      .login-bg::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0.8;
+      }
+      @media (max-width: 768px) {
         .login-bg {
-            background-image: url('https://placehold.co/1000x1200/4f46e5/ffffff?text=AI+Learning+Background'); /* Placeholder for your project background image */
-            background-size: cover;
-            background-position: center;
-            /* Gradient overlay for better text contrast */
-            position: relative;
+          display: none; /* Hide background panel on mobile */
         }
-        .login-bg::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(79, 70, 229, 0.8), rgba(20, 184, 166, 0.6));
-            opacity: 0.8;
-        }
-        @media (max-width: 768px) {
-            .login-bg {
-                display: none; /* Hide background panel on mobile */
-            }
-        }
+      }
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
     <div class="flex min-h-screen">
+      <!-- Left Panel: Project Branding & Description (Hidden on mobile) -->
+      <div
+        class="login-bg hidden md:block md:w-1/2 p-10 flex items-end relative backdrop-blur-xl bg-white/5 border border-white/10 shadow-2xl rounded-2xl"
+      >
+        <div class="relative z-10 text-white">
+          <h1 class="text-5xl font-extrabold mb-4 leading-tight">
+            Welcome to <span class="text-indigo-200">SmartLearn Studio</span>
+          </h1>
+          <p class="text-xl opacity-90">
+            Your hub for AI-generated curricula and adaptive learning paths.
+            Fast-track your development skills with hyper-personalized content.
+          </p>
 
-        <!-- Left Panel: Project Branding & Description (Hidden on mobile) -->
-        <div class="login-bg hidden md:block md:w-1/2 p-10 flex items-end relative">
-            <div class="relative z-10 text-white">
-                <h1 class="text-5xl font-extrabold mb-4 leading-tight">
-                    Welcome to <span class="text-indigo-200">SmartLearn Studio</span>
-                </h1>
-                <p class="text-xl opacity-90">
-                    Your hub for AI-generated curricula and adaptive learning paths. Fast-track your development skills with hyper-personalized content.
-                </p>
-                <!-- Project Stack/Feature reminder -->
-                <div class="mt-6 flex space-x-4 text-sm font-semibold opacity-80">
-                    <span>MERN Stack</span>
-                    <span>|</span>
-                    <span>Generative AI (Gemini)</span>
-                    <span>|</span>
-                    <span>Adaptive Engine</span>
-                </div>
-            </div>
+          <div class="mt-6 flex space-x-4 text-sm font-semibold opacity-80">
+            <span>MERN Stack</span>
+            <span>|</span>
+            <span>Generative AI (Gemini)</span>
+            <span>|</span>
+            <span>Adaptive Engine</span>
+          </div>
         </div>
+      </div>
 
-        <!-- Right Panel: Login Form -->
-        <div class="w-full md:w-1/2 flex items-center justify-center p-6 sm:p-12">
-            <div class="w-full max-w-md bg-white p-8 rounded-xl shadow-2xl border border-gray-100">
-                <div class="text-center mb-8">
-                    <h2 class="text-3xl font-bold text-gray-900">
-                        Sign In to SmartLearn Studio
-                    </h2>
-                    <p class="mt-2 text-sm text-gray-600">
-                        Welcome back! Please sign in to continue.
-                    </p>
-                </div>
-                
-                <!-- Google Sign-In (Mockup) -->
-                 <form action="Dashboard.html" method="get">
-                         <button class="w-full flex items-center justify-center py-2.5 px-4 border border-gray-300 rounded-lg shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 transition duration-150">
-                    <svg class="h-5 w-5 mr-2" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 4.5c2.14 0 3.99.79 5.49 2.29l3.18-3.18C17.44 1.77 14.85 1 12 1 7.21 1 3.01 3.73 1.05 8.16l3.86 3.01C5.78 9.38 8.65 7.5 12 7.5c1.47 0 2.84.45 3.97 1.25l-.26.25c-1.39-1.04-3.17-1.61-5.11-1.61-3.69 0-6.85 2.5-7.9 5.92L0 17.5l3.86 3.01C5.78 22.27 8.71 23 12 23c6.05 0 10.9-4.85 10.9-10.9 0-1.12-.13-2.17-.35-3.18H12v3.5h6.18c-.28 1.46-1.16 2.86-2.61 3.86l-.26.25c-1.25.93-2.88 1.5-4.68 1.5-3.69 0-6.85-2.5-7.9-5.92L0 17.5l3.86 3.01C5.78 22.27 8.71 23 12 23c6.05 0 10.9-4.85 10.9-10.9 0-1.12-.13-2.17-.35-3.18H12z" clip-rule="evenodd" fill="currentColor"/></svg>
-                    Continue with Google
-                </button>
-                 </form>
+      <!-- Right Panel: Login Form -->
+      <div class="w-full md:w-1/2 flex items-center justify-center p-6 sm:p-12">
+        <div
+          class="w-full max-w-md bg-white p-8 rounded-xl shadow-2xl border border-gray-100"
+        >
+          <div class="text-center mb-8">
+            <h2 class="text-3xl font-bold text-gray-900">
+              Sign In to SmartLearn Studio
+            </h2>
+            <p class="mt-2 text-sm text-gray-600">
+              Welcome back! Please sign in to continue.
+            </p>
+          </div>
 
-                <div class="relative my-6">
-                    <div class="absolute inset-0 flex items-center">
-                        <div class="w-full border-t border-gray-300"></div>
-                    </div>
-                    <div class="relative flex justify-center text-sm">
-                        <span class="px-2 bg-white text-gray-500">
-                            or
-                        </span>
-                    </div>
-                </div>
+          <!-- Google Sign-In (Mockup) -->
+          <form action="Dashboard.html" method="get">
+            <button
+              class="w-full flex items-center justify-center py-2.5 px-4 border border-gray-300 rounded-lg shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 transition duration-150"
+            >
+              <svg
+                class="h-5 w-5 mr-2"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 4.5c2.14 0 3.99.79 5.49 2.29l3.18-3.18C17.44 1.77 14.85 1 12 1 7.21 1 3.01 3.73 1.05 8.16l3.86 3.01C5.78 9.38 8.65 7.5 12 7.5c1.47 0 2.84.45 3.97 1.25l-.26.25c-1.39-1.04-3.17-1.61-5.11-1.61-3.69 0-6.85 2.5-7.9 5.92L0 17.5l3.86 3.01C5.78 22.27 8.71 23 12 23c6.05 0 10.9-4.85 10.9-10.9 0-1.12-.13-2.17-.35-3.18H12v3.5h6.18c-.28 1.46-1.16 2.86-2.61 3.86l-.26.25c-1.25.93-2.88 1.5-4.68 1.5-3.69 0-6.85-2.5-7.9-5.92L0 17.5l3.86 3.01C5.78 22.27 8.71 23 12 23c6.05 0 10.9-4.85 10.9-10.9 0-1.12-.13-2.17-.35-3.18H12z"
+                  clip-rule="evenodd"
+                  fill="currentColor"
+                />
+              </svg>
+              Continue with Google
+            </button>
+          </form>
 
-                <!-- Email/Password Form -->
-                <form action="Dashboard.html" method="get" class="space-y-4">
-                    <div>
-                        <label for="email" class="block text-sm font-medium text-gray-700">Email address</label>
-                        <input id="email" name="email" type="email" autocomplete="email" required class="mt-1 block w-full rounded-lg border-gray-300 border shadow-sm p-3 focus:border-indigo-500 focus:ring-indigo-500" placeholder="you@example.com">
-                    </div>
-
-                    <div>
-                        <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
-                        <input id="password" name="password" type="password" autocomplete="current-password" required class="mt-1 block w-full rounded-lg border-gray-300 border shadow-sm p-3 focus:border-indigo-500 focus:ring-indigo-500" placeholder="••••••••">
-                    </div>
-
-                    <button href="Dashboard.html" type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 rounded-lg shadow-md transition duration-200">
-                        Continue
-                    </button>
-                </form>
-
-                <div class="mt-6 text-center" >
-                    <p class="text-sm text-gray-600">
-                        Don't have an account? 
-                        <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">Sign up</a>
-                    </p>
-                    <p class="mt-3 text-xs text-gray-500">
-                        <a href="#" class="hover:text-gray-700">Forgot Password?</a>
-                    </p>
-                </div>
+          <div class="relative my-6">
+            <div class="absolute inset-0 flex items-center">
+              <div class="w-full border-t border-gray-300"></div>
             </div>
-        </div>
+            <div class="relative flex justify-center text-sm">
+              <span class="px-2 bg-white text-gray-500"> or </span>
+            </div>
+          </div>
 
+          <!-- Email/Password Form -->
+          <form action="Dashboard.html" method="get" class="space-y-4">
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700"
+                >Email address</label
+              >
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+                class="mt-1 block w-full rounded-lg border-gray-300 border shadow-sm p-3 focus:border-indigo-500 focus:ring-indigo-500"
+                placeholder="you@example.com"
+              />
+            </div>
+
+            <div>
+              <label
+                for="password"
+                class="block text-sm font-medium text-gray-700"
+                >Password</label
+              >
+              <input
+                id="password"
+                name="password"
+                type="password"
+                autocomplete="current-password"
+                required
+                class="mt-1 block w-full rounded-lg border-gray-300 border shadow-sm p-3 focus:border-indigo-500 focus:ring-indigo-500"
+                placeholder="••••••••"
+              />
+            </div>
+
+            <button
+              href="Dashboard.html"
+              type="submit"
+              class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 rounded-lg shadow-md transition duration-200"
+            >
+              Continue
+            </button>
+          </form>
+
+          <div class="mt-6 text-center">
+            <p class="text-sm text-gray-600">
+              Don't have an account?
+              <a
+                href="#"
+                class="font-medium text-indigo-600 hover:text-indigo-500"
+                >Sign up</a
+              >
+            </p>
+            <p class="mt-3 text-xs text-gray-500">
+              <a href="#" class="hover:text-gray-700">Forgot Password?</a>
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-
-</body>
+  </body>
 </html>
