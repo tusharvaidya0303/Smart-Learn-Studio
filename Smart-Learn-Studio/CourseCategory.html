@@ -13,10 +13,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" type="image/png" sizes="96x96" href="Asset/favicon/favicon-96x96.png">
-<link rel="icon" type="image/svg+xml" href="Asset/favicon/favicon.svg">
-<link rel="shortcut icon" href="Asset/favicon/favicon.ico">
-<link rel="apple-touch-icon" sizes="180x180" href="Asset/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./Asset/favicon/favicon-96x96.png">
+<link rel="icon" type="image/svg+xml" href="./Asset/favicon/favicon.svg">
+<link rel="shortcut icon" href="./Asset/favicon/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="./Asset/favicon/apple-touch-icon.png">
 <link rel="manifest" href="favicon/site.webmanifest">
     <style>
         body {
@@ -207,12 +207,12 @@ font-size: 1.2rem;
     <!-- Navigation -->
     <nav class="flex-1 p-3 space-y-1">
       <!-- Item -->
-      <a href="landing-page.html" class="sidebar-item" title="Home">
+      <a href="./landing-page.html" class="sidebar-item" title="Home">
         <span class="icon"><i class="fa-solid fa-house"></i></span>
         <span class="label">Home</span>
       </a>
 
-      <a href="Dashboard.html" class="sidebar-item" title="My Courses">
+      <a href="./Dashboard.html" class="sidebar-item" title="My Courses">
         <span class="icon"><i class="fa-solid fa-book"></i></span>
         <span class="label">My Courses</span>
       </a>
@@ -234,7 +234,7 @@ font-size: 1.2rem;
         <span class="label">Settings</span>
       </a>
 
-      <a href="login-page.html" class="sidebar-item text-red-400 hover:text-red-300" title="Logout">
+      <a href="./login-page.html" class="sidebar-item text-red-400 hover:text-red-300" title="Logout">
         <span class="icon"><i class="fa-solid fa-arrow-right-from-bracket"></i></span>
         <span class="label">Logout</span>
       </a>
@@ -781,7 +781,7 @@ mainContent.innerHTML = `
       </p>
 
       <!-- Action -->
-      <a href="Dashboard.html"
+      <a href="./Dashboard.html"
          class="mt-8 inline-flex items-center gap-2
                 text-indigo-600 hover:text-indigo-800 font-medium
                 transition">
@@ -792,7 +792,7 @@ mainContent.innerHTML = `
 `;
         // Simulate success redirect after a few seconds
         setTimeout(() => {
-             window.location.href = "Dashboard.html"; 
+             window.location.href = "./Dashboard.html"; 
         }, 3000); // 3 seconds simulation
     }
 
